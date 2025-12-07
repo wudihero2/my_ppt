@@ -13,7 +13,7 @@ layout: 'intro'
 <div class="flex flex-col justify-between h-full py-8">
   <div>
     <h2 class="text-5xl font-bold mb-6">
-      What is Real-time(Streaming) Pipeline?
+      What is Streaming(Real-time) Pipeline?
     </h2>
     <h3 class="text-3xl font-bold mb-4">Stan Hsu</h3>
     <ul class="text-lg space-y-1">
@@ -2244,7 +2244,107 @@ Only backfill this!
 
 
 ---
+
+# New Technologies
+
+
+<div class="flex flex-col gap-2 mt-1 text-xs">
+
+<!-- Traditional: Kafka + Flink -->
+<div v-click class="p-2 bg-gradient-to-r from-gray-800 to-gray-900 border-2 border-gray-600 rounded-lg">
+<div class="font-bold text-gray-400 mb-1.5">Traditional</div>
+<div class="flex items-center gap-1.5">
+<div class="px-2.5 py-1 bg-blue-900 border border-blue-400 rounded whitespace-nowrap" style="color:#93c5fd; width: 95px; text-align: center;">Data Source</div>
+<div class="text-gray-500">→</div>
+<div class="px-2.5 py-1 bg-green-900 border border-green-400 rounded whitespace-nowrap" style="color:#86efac; width: 95px; text-align: center;">CDC</div>
+<div class="text-gray-500">→</div>
+<div class="px-2.5 py-1 bg-yellow-900 border border-yellow-400 rounded whitespace-nowrap" style="color:#fde047; width: 95px; text-align: center;">Kafka</div>
+<div class="text-gray-500">→</div>
+<div style="width: 95px;"></div>
+<div class="text-gray-500">→</div>
+<div class="px-2.5 py-1 bg-orange-900 border border-orange-400 rounded whitespace-nowrap" style="color:#fdba74; width: 95px; text-align: center;">Flink</div>
+<div class="text-gray-500">→</div>
+<div class="px-2.5 py-1 bg-purple-900 border border-purple-400 rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP</div>
+<div class="text-gray-500">→</div>
+<div class="px-2.5 py-1 bg-cyan-900 border border-cyan-400 rounded whitespace-nowrap" style="color:#67e8f9; width: 95px; text-align: center;">Data Request</div>
+</div>
+</div>
+
+<!-- Flink + Paimon -->
+<div v-click class="p-2 bg-gradient-to-r from-blue-900/30 to-purple-900/30 border-2 border-blue-400 rounded-lg">
+<div class="flex items-center gap-1.5 mb-1.5">
+<div class="font-bold text-blue-300">1️⃣ Flink + Paimon</div>
+<div class="text-blue-400">✨ Lakehouse Integration</div>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="px-2.5 py-1 bg-blue-900 border border-blue-400 rounded whitespace-nowrap" style="color:#93c5fd; width: 95px; text-align: center;">Data Source</div>
+<div class="text-blue-400">→</div>
+<div class="px-2.5 py-1 bg-green-900 border border-green-400 rounded whitespace-nowrap" style="color:#86efac; width: 95px; text-align: center;">CDC</div>
+<div class="text-blue-400">→</div>
+<div class="px-2 py-1 bg-yellow-900/30 border border-yellow-400 border-dashed rounded whitespace-nowrap" style="color:#fde047; width: 95px; text-align: center;">Kafka <span style="font-size: 0.6rem; color: #9ca3af;">(opt)</span></div>
+<div class="text-blue-400">→</div>
+<div class="px-2.5 py-1 bg-blue-900 border-2 border-blue-300 rounded font-bold whitespace-nowrap" style="color:#60a5fa; width: 95px; text-align: center;">Paimon</div>
+<div class="text-blue-400">→</div>
+<div class="px-2.5 py-1 bg-orange-900 border border-orange-400 rounded whitespace-nowrap" style="color:#fdba74; width: 95px; text-align: center;">Flink</div>
+<div class="text-blue-400">→</div>
+<div class="px-2.5 py-1 bg-purple-900 border border-purple-400 rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP</div>
+<div class="text-blue-400">→</div>
+<div class="px-2.5 py-1 bg-cyan-900 border border-cyan-400 rounded whitespace-nowrap" style="color:#67e8f9; width: 95px; text-align: center;">Data Request</div>
+</div>
+<div class="text-blue-300 mt-1.5" style="font-size: 0.65rem;">📊 Query historical data directly from Paimon storage</div>
+</div>
+
+<!-- Flink 2.0 + Fluss -->
+<div v-click class="p-2 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-2 border-purple-400 rounded-lg">
+<div class="flex items-center gap-1.5 mb-1.5">
+<div class="font-bold text-purple-300">2️⃣ Flink 2.0 + Fluss</div>
+<div class="text-purple-400">✨ State Management Evolution</div>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="px-2.5 py-1 bg-blue-900 border border-blue-400 rounded whitespace-nowrap" style="color:#93c5fd; width: 95px; text-align: center;">Data Source</div>
+<div class="text-purple-400">→</div>
+<div class="px-2.5 py-1 bg-green-900 border border-green-400 rounded whitespace-nowrap" style="color:#86efac; width: 95px; text-align: center;">CDC</div>
+<div class="text-purple-400">→</div>
+<div class="px-2.5 py-1 bg-purple-900 border-2 border-purple-300 rounded font-bold whitespace-nowrap" style="color:#c084fc; width: 95px; text-align: center;">Fluss</div>
+<div class="text-purple-400">→</div>
+<div style="width: 95px;"></div>
+<div class="text-purple-400">→</div>
+<div class="px-2.5 py-1 bg-orange-900 border border-orange-400 rounded whitespace-nowrap" style="color:#fdba74; width: 95px; text-align: center;">Flink</div>
+<div class="text-purple-400">→</div>
+<div class="px-2.5 py-1 bg-purple-900 border border-purple-400 rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP</div>
+<div class="text-purple-400">→</div>
+<div class="px-2.5 py-1 bg-cyan-900 border border-cyan-400 rounded whitespace-nowrap" style="color:#67e8f9; width: 95px; text-align: center;">Data Request</div>
+</div>
+<div class="text-purple-300 mt-1.5" style="font-size: 0.65rem;">💾 Fluss maintains state internally, exports to Paimon/Iceberg for queries</div>
+</div>
+
+<!-- RisingWave -->
+<div v-click class="p-2 bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-2 border-green-400 rounded-lg">
+<div class="flex items-center gap-1.5 mb-1.5">
+<div class="font-bold text-green-300">3️⃣ RisingWave</div>
+<div class="text-green-400">✨ All-in-One Rust Engine</div>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="px-2.5 py-1 bg-blue-900 border border-blue-400 rounded whitespace-nowrap" style="color:#93c5fd; width: 95px; text-align: center;">Data Source</div>
+<div class="text-green-400">→</div>
+<div class="px-2 py-1 bg-green-900/30 border border-green-400 border-dashed rounded whitespace-nowrap" style="color:#86efac; width: 95px; text-align: center;">CDC <span style="font-size: 0.6rem; color: #9ca3af;">(opt)</span></div>
+<div class="text-green-400">→</div>
+<div class="px-2 py-1 bg-yellow-900/30 border border-yellow-400 border-dashed rounded whitespace-nowrap" style="color:#fde047; width: 95px; text-align: center;">Kafka <span style="font-size: 0.6rem; color: #9ca3af;">(opt)</span></div>
+<div class="text-green-400">→</div>
+<div class="px-2.5 py-1 bg-green-900 border-2 border-green-300 rounded font-bold whitespace-nowrap" style="color:#4ade80; width: 95px; text-align: center;">RisingWave</div>
+<div class="text-green-400">→</div>
+<div class="px-2 py-1 bg-purple-900/30 border border-purple-400 border-dashed rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP <span style="font-size: 0.6rem; color: #9ca3af;">(opt)</span></div>
+<div class="text-green-400">→</div>
+<div class="px-2.5 py-1 bg-cyan-900 border border-cyan-400 rounded whitespace-nowrap" style="color:#67e8f9; width: 95px; text-align: center;">Data Request</div>
+</div>
+<div class="text-green-300 mt-1.5" style="font-size: 0.65rem;">🚀 Simplified & flexible: Direct CDC or via Kafka, optional persistence layer</div>
+</div>
+
+</div>
+
+---
 layout: center
+class: "text-center"
 ---
 
 # Conclusion
@@ -2411,35 +2511,6 @@ Keep learning, keep building 🌟
 
 ---
 
-# New Technologies
-
-<div v-click>
-
-### Flink + Paimon
-- Suitable for minute-level latency
-- Built-in Lakehouse storage for historical data
-
-</div>
-
-<div v-click class="mt-4">
-
-### Flink 2.0 + Fluss
-- Flink: Cloud-native state management (storage-compute separation)
-- Fluss: Delta lookup JOIN (solves large state challenges)
-- Fluss: Lakehouse integration (persist to Paimon/Iceberg)
-
-</div>
-
-<div v-click class="mt-4">
-
-### RisingWave (Rust-based Streaming Engine)
-- Better latency with native performance
-- Resource efficiency from Rust's memory model
-- Cloud-native state management (storage-compute separation)
-- Lakehouse integration (Iceberg)
-</div>
-
----
 
 ---
 preload: false
