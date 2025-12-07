@@ -41,121 +41,6 @@ class: "text-center"
 
 ---
 
-# The Early Days: Single Database for Everything
-
-<div class="grid gap-8" style="grid-template-columns: 1fr 1fr;">
-
-<div v-click>
-
-### Simple Application
-
-```mermaid
-%%{init: {'theme':'dark', 'themeVariables': { 'edgeLabelBackground':'#1e1e1e'}}}%%
-
-graph TB
-    App["<b style='color:#94b8d1'>Application</b><br/>(CRUD)"]
-    DB["<b style='color:#94b8d1'>Database</b><br/>(OLTP)"]
-
-    App -->|Read/Write| DB
-
-    style App fill:#2d3748,stroke:#94b8d1,stroke-width:2px
-    style DB fill:#2d3748,stroke:#68d391,stroke-width:2px
-```
-
-<div class="text-sm mt-4">
-
-✅ Fast transactions
-✅ Simple architecture
-
-</div>
-
-</div>
-
-<div v-click>
-
-### Reports Added
-
-```mermaid
-%%{init: {'theme':'dark', 'themeVariables': { 'edgeLabelBackground':'#1e1e1e'}}}%%
-
-graph TB
-    App["<b style='color:#94b8d1'>Application</b><br/>(CRUD)"]
-    Reports["<b style='color:#f56565'>Reports</b><br/>(Complex Queries)"]
-    DB["<b style='color:#94b8d1'>Database</b><br/>(OLTP)"]
-
-    App -->|Fast writes| DB
-    Reports -->|Heavy JOINs<br/>Aggregations| DB
-
-    style App fill:#2d3748,stroke:#94b8d1,stroke-width:2px
-    style Reports fill:#2d3748,stroke:#f56565,stroke-width:2px
-    style DB fill:#2d3748,stroke:#f56565,stroke-width:3px,stroke-dasharray: 5 5
-```
-
-<div class="text-sm mt-4 space-y-1">
-
-<div>❌ Slow queries block transactions</div>
-<div>❌ Database overload</div>
-<div>❌ Poor user experience</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div v-click class="mt-6 text-center text-lg">
-
-</div>
-
----
-
-# Solution: Separate Database for Analytics
-
-```mermaid
-%%{init: {'theme':'dark', 'themeVariables': { 'edgeLabelBackground':'#1e1e1e'}}}%%
-
-graph LR
-    App["<b style='color:#94b8d1'>Application</b><br/>(CRUD)"]
-    OLTP["<b style='color:#94b8d1'>Database</b><br/>(OLTP)"]
-
-    Pipeline["<b style='color:#f6ad55'>Data Pipeline</b><br/>(Copy Data)"]
-
-    OLAP["<b style='color:#68d391'>Report Database</b><br/>(Analytics)"]
-    Reports["<b style='color:#68d391'>Reports</b><br/>(Complex Queries)"]
-
-    App -->|Fast writes| OLTP
-    OLTP -->|Replicate| Pipeline
-    Pipeline -->|Load| OLAP
-    Reports -->|Heavy queries| OLAP
-
-    style App fill:#2d3748,stroke:#94b8d1,stroke-width:2px
-    style OLTP fill:#2d3748,stroke:#94b8d1,stroke-width:2px
-    style Pipeline fill:#2d3748,stroke:#f6ad55,stroke-width:2px
-    style OLAP fill:#2d3748,stroke:#68d391,stroke-width:2px
-    style Reports fill:#2d3748,stroke:#68d391,stroke-width:2px
-```
-
-<div class="grid gap-4 mt-6" style="grid-template-columns: 1fr 1fr;">
-
-<div v-click>
-
-### ✅ Benefits
-- Application DB remains fast
-- Reports don't impact transactions
-
-</div>
-
-<div v-click>
-
-### 🤔 New Challenge For Report Database
-- Data Volume Keeps Growing...
-
-</div>
-
-</div>
-
----
-
 # But... Data Volume Keeps Growing
 
 <div class="grid gap-3" style="grid-template-columns: 2fr 1fr;">
@@ -2652,3 +2537,118 @@ Order waits → Event2 joins → Output "paid" → Event1 joins → Output wrong
   88% { opacity: 0; }
 }
 </style>
+
+---
+
+# The Early Days: Single Database for Everything
+
+<div class="grid gap-8" style="grid-template-columns: 1fr 1fr;">
+
+<div v-click>
+
+### Simple Application
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': { 'edgeLabelBackground':'#1e1e1e'}}}%%
+
+graph TB
+    App["<b style='color:#94b8d1'>Application</b><br/>(CRUD)"]
+    DB["<b style='color:#94b8d1'>Database</b><br/>(OLTP)"]
+
+    App -->|Read/Write| DB
+
+    style App fill:#2d3748,stroke:#94b8d1,stroke-width:2px
+    style DB fill:#2d3748,stroke:#68d391,stroke-width:2px
+```
+
+<div class="text-sm mt-4">
+
+✅ Fast transactions
+✅ Simple architecture
+
+</div>
+
+</div>
+
+<div v-click>
+
+### Reports Added
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': { 'edgeLabelBackground':'#1e1e1e'}}}%%
+
+graph TB
+    App["<b style='color:#94b8d1'>Application</b><br/>(CRUD)"]
+    Reports["<b style='color:#f56565'>Reports</b><br/>(Complex Queries)"]
+    DB["<b style='color:#94b8d1'>Database</b><br/>(OLTP)"]
+
+    App -->|Fast writes| DB
+    Reports -->|Heavy JOINs<br/>Aggregations| DB
+
+    style App fill:#2d3748,stroke:#94b8d1,stroke-width:2px
+    style Reports fill:#2d3748,stroke:#f56565,stroke-width:2px
+    style DB fill:#2d3748,stroke:#f56565,stroke-width:3px,stroke-dasharray: 5 5
+```
+
+<div class="text-sm mt-4 space-y-1">
+
+<div>❌ Slow queries block transactions</div>
+<div>❌ Database overload</div>
+<div>❌ Poor user experience</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div v-click class="mt-6 text-center text-lg">
+
+</div>
+
+---
+
+# Solution: Separate Database for Analytics
+
+```mermaid
+%%{init: {'theme':'dark', 'themeVariables': { 'edgeLabelBackground':'#1e1e1e'}}}%%
+
+graph LR
+    App["<b style='color:#94b8d1'>Application</b><br/>(CRUD)"]
+    OLTP["<b style='color:#94b8d1'>Database</b><br/>(OLTP)"]
+
+    Pipeline["<b style='color:#f6ad55'>Data Pipeline</b><br/>(Copy Data)"]
+
+    OLAP["<b style='color:#68d391'>Report Database</b><br/>(Analytics)"]
+    Reports["<b style='color:#68d391'>Reports</b><br/>(Complex Queries)"]
+
+    App -->|Fast writes| OLTP
+    OLTP -->|Replicate| Pipeline
+    Pipeline -->|Load| OLAP
+    Reports -->|Heavy queries| OLAP
+
+    style App fill:#2d3748,stroke:#94b8d1,stroke-width:2px
+    style OLTP fill:#2d3748,stroke:#94b8d1,stroke-width:2px
+    style Pipeline fill:#2d3748,stroke:#f6ad55,stroke-width:2px
+    style OLAP fill:#2d3748,stroke:#68d391,stroke-width:2px
+    style Reports fill:#2d3748,stroke:#68d391,stroke-width:2px
+```
+
+<div class="grid gap-4 mt-6" style="grid-template-columns: 1fr 1fr;">
+
+<div v-click>
+
+### ✅ Benefits
+- Application DB remains fast
+- Reports don't impact transactions
+
+</div>
+
+<div v-click>
+
+### 🤔 New Challenge For Report Database
+- Data Volume Keeps Growing...
+
+</div>
+
+</div>
