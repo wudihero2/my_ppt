@@ -2019,7 +2019,7 @@ History + Incremental
 <div class="text-blue-400">→</div>
 <div class="px-2.5 py-1 bg-orange-900 border border-orange-400 rounded whitespace-nowrap" style="color:#fdba74; width: 95px; text-align: center;">Flink</div>
 <div class="text-blue-400">→</div>
-<div class="px-2.5 py-1 bg-purple-900 border border-purple-400 rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP</div>
+<div class="px-2 py-1 bg-purple-900/30 border border-purple-400 border-dashed rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP <span style="font-size: 0.6rem; color: #9ca3af;">(opt)</span></div>
 <div class="text-blue-400">→</div>
 <div class="px-2.5 py-1 bg-cyan-900 border border-cyan-400 rounded whitespace-nowrap" style="color:#67e8f9; width: 95px; text-align: center;">Data Request</div>
 </div>
@@ -2043,7 +2043,7 @@ History + Incremental
 <div class="text-purple-400">→</div>
 <div class="px-2.5 py-1 bg-orange-900 border border-orange-400 rounded whitespace-nowrap" style="color:#fdba74; width: 95px; text-align: center;">Flink</div>
 <div class="text-purple-400">→</div>
-<div class="px-2.5 py-1 bg-purple-900 border border-purple-400 rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP</div>
+<div class="px-2 py-1 bg-purple-900/30 border border-purple-400 border-dashed rounded whitespace-nowrap" style="color:#d8b4fe; width: 95px; text-align: center;">OLAP <span style="font-size: 0.6rem; color: #9ca3af;">(opt)</span></div>
 <div class="text-purple-400">→</div>
 <div class="px-2.5 py-1 bg-cyan-900 border border-cyan-400 rounded whitespace-nowrap" style="color:#67e8f9; width: 95px; text-align: center;">Data Request</div>
 </div>
