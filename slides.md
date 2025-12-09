@@ -605,35 +605,8 @@ graph LR
     style Output fill:#2d3748,stroke:#9f7aea,stroke-width:3px
 ```
 
-<div class="grid gap-4 mt-6" style="grid-template-columns: 1fr 1fr;">
 
-<div v-click class="p-4 border-2 border-green-400 rounded-lg bg-gradient-to-br from-green-900/20 to-transparent">
 
-<div class="text-lg font-bold text-green-400 mb-3">✅ Pros:</div>
-
-<div class="text-sm">
-• <span class="text-green-400 font-bold">No Batch Layer!</span> Single codebase - <span v-mark.underline.red=1>one logic, one system</span><br/><br/>
-• Pre-computed results - even 100+ QPS only reads result tables on DB, <span v-mark.underline.red=1>no DB overload</span>
-</div>
-
-</div>
-
-<div v-click class="p-4 border-2 border-blue-400 rounded-lg bg-gradient-to-br from-blue-900/20 to-transparent flex items-center justify-center">
-
-<div class="text-center">
-<div class="text-3xl font-bold leading-relaxed">
-<div class="animate-pulse bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-⚡ Low Latency ⚡
-</div>
-<div class="animate-pulse bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mt-2">
-⚡ Low Response Time ⚡
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
 
 ---
 
@@ -2324,6 +2297,55 @@ Write SQL models, run tests, generate docs — just like always
 <div v-click class="text-center">
 <div class="text-2xl text-gray-300">
 Your dbt skills now unlock <span class="text-green-400 font-bold">real-time analytics</span> 🚀
+</div>
+</div>
+
+</div>
+
+---
+
+
+# We're Hiring! 💼
+
+<div class="flex flex-col items-center" style="padding-top: 1rem;">
+
+<div class="text-center mb-5">
+<div class="text-4xl font-bold mb-3 text-white">
+TSMC
+</div>
+<div class="text-2xl font-semibold text-gray-300">
+is looking for <span class="text-green-400">Data Engineers</span>!
+</div>
+</div>
+
+<div class="flex flex-col gap-4 items-center" style="max-width: 900px; width: 100%;">
+
+<div  class="p-4 bg-blue-900/30 border-2 border-blue-400/50 rounded-lg w-full">
+<div class="text-blue-300 font-bold mb-2 text-lg">🚀 What We Do</div>
+<div class="text-gray-300" style="font-size: 0.95rem;">
+Build and maintain <span class="text-blue-400">data pipelines</span>
+</div>
+</div>
+
+<div  class="p-4 bg-green-900/30 border-2 border-green-400/50 rounded-lg w-full">
+<div class="text-green-300 font-bold mb-2 text-lg">💡 What You'll Learn</div>
+<div class="text-gray-300" style="font-size: 0.95rem;">
+Modern data pipeline/architecture, Scale challenges
+</div>
+</div>
+
+<div class="p-4 bg-orange-900/30 border-2 border-orange-400/50 rounded-lg w-full">
+<div class="text-orange-300 font-bold mb-2 text-lg">🌟 Who We Want</div>
+<div class="text-gray-300" style="font-size: 0.95rem;">
+Passionate about data, Eager to learn, Team player
+</div>
+</div>
+
+</div>
+
+<div class="mt-6 text-center">
+<div class="text-xl text-cyan-400 font-semibold">
+Interested? Let's talk! 🎉
 </div>
 </div>
 
