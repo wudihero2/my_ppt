@@ -41,7 +41,7 @@ class: "text-center"
 
 ---
 
-# But... Data Volume Keeps Growing
+# Data Volume Keeps Growing
 
 <div class="grid gap-3" style="grid-template-columns: 2fr 1fr;">
 
@@ -71,7 +71,6 @@ class: "text-center"
 
 <div class="text-center text-green-400 font-bold text-xs mt-1">✅ OK</div>
 <div style="font-size: 0.65rem;">
-Single machine<br/>handles it well
 </div>
 
 </div>
@@ -98,7 +97,6 @@ Single machine<br/>handles it well
 
 <div class="text-center text-orange-400 font-bold text-xs mt-1">⚠️ Struggling</div>
 <div style="font-size: 0.65rem;">
-Slow queries<br/>High memory
 </div>
 
 </div>
@@ -127,7 +125,6 @@ CRASHED
 
 <div class="text-center text-red-400 font-bold text-xs mt-1">❌ BOOM!</div>
 <div style="font-size: 0.65rem;">
-Physically<br/>impossible
 </div>
 
 </div>
@@ -268,7 +265,7 @@ graph LR
     style Output fill:#2d3748,stroke:#4fd1c5,stroke-width:2px
 ```
 
-<div v-click class="mt-6 text-center">
+<div class="mt-6 text-center">
 
 <div class="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent animate-pulse">
 💡 This is how modern data pipelines handle BIG data! 💡
@@ -295,10 +292,9 @@ class: "text-center"
 
 <div class="text-lg font-bold mb-2">Fraud Detection</div>
 
-<div class="text-sm text-gray-300 mb-3">Real-time transaction monitoring</div>
+<div class="text-sm text-gray-300 mb-3">⚡ Milliseconds matter</div>
 
 <div class="text-red-400 text-xs mt-2">
-⚡ Milliseconds matter
 </div>
 
 </div>
@@ -309,10 +305,9 @@ class: "text-center"
 
 <div class="text-lg font-bold mb-2">Live Dashboards</div>
 
-<div class="text-sm text-gray-300 mb-3">Real-time analytics for business</div>
+<div class="text-sm text-gray-300 mb-3">⚡ Fresh data, better insights</div>
 
 <div class="text-blue-400 text-xs mt-2">
-⚡ Fresh data, better insights
 </div>
 
 </div>
@@ -323,10 +318,10 @@ class: "text-center"
 
 <div class="text-lg font-bold mb-2">System Monitoring</div>
 
-<div class="text-sm text-gray-300 mb-3">Immediate alerting on issues</div>
+<div class="text-sm text-gray-300 mb-3">⚡ Prevent downtime</div>
 
 <div class="text-yellow-400 text-xs mt-2">
-⚡ Prevent downtime
+
 </div>
 
 </div>
@@ -692,7 +687,6 @@ GROUP BY
 <div class="text-sm">
 ✓ <span class="text-blue-400 font-bold animate-pulse">One logic, one system</span><br/><br/>
 ✓ No duplicate code between batch & speed<br/><br/>
-✓ Easier to maintain and debug
 </div>
 </div>
 
@@ -1550,20 +1544,20 @@ preload: false
 # Solution 1: Throw Money at It 💰
 #### (If you have unlimited budget...)
 
-<div class="flex justify-center" style="margin-top: 1rem;">
+<div class="flex justify-center" style="margin-top: 0.5rem;">
 <div style="max-width: 750px;">
 
-<div v-click class="text-center mb-6">
-<div style="font-size: 3rem; margin-bottom: 0.5rem;">💸💸💸</div>
-<div class="text-xl font-bold text-yellow-400 mb-2">
+<div v-click class="text-center mb-4">
+<div style="font-size: 2.5rem; margin-bottom: 0.3rem;">💸💸💸</div>
+<div class="text-lg font-bold text-yellow-400 mb-1">
 Just scale up the Streaming Engine!
 </div>
-<div class="text-base text-gray-300">
+<div class="text-sm text-gray-300">
 Need to process historical data? No problem!
 </div>
 </div>
 
-<div v-click class="grid grid-cols-2 gap-4 mb-4">
+<div v-click class="grid grid-cols-2 gap-4 mb-3">
 <div class="p-3 bg-green-900 bg-opacity-30 border-2 border-green-400 rounded-lg">
 <div class="text-center">
 <div class="text-2xl mb-1">🖥️ × 100</div>
@@ -1578,15 +1572,15 @@ Need to process historical data? No problem!
 </div>
 </div>
 
-<div v-click class="p-5 bg-red-900 bg-opacity-30 border-l-4 border-red-400 rounded mb-6">
-<div class="text-lg font-bold text-red-300 mb-3 text-center">⚠️ Reality Check:</div>
-<div class="text-base text-red-200 text-center">
+<div v-click class="p-4 bg-red-900 bg-opacity-30 border-l-4 border-red-400 rounded mb-4">
+<div class="text-base font-bold text-red-300 mb-2 text-center">⚠️ Reality Check:</div>
+<div class="text-sm text-red-200 text-center">
 Most companies don't have unlimited budget...
 </div>
 </div>
 
 <div v-click class="text-center">
-<div class="text-xl text-gray-400 italic">
+<div class="text-lg text-gray-400 italic">
 "There must be a smarter way..." 🤔
 </div>
 </div>
@@ -1753,6 +1747,19 @@ History + Incremental
 </div>
 </div>
 
+<!-- Benefits list (appears after animation) -->
+<div class="benefits-list" style="position: absolute; left: 250px; top: 50px; width: 250px; padding: 10px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(99, 102, 241, 0.3)); border: 2px solid #a78bfa; border-radius: 6px; opacity: 0; box-shadow: 0 0 15px rgba(167, 139, 250, 0.5);">
+<div style="text-align: center; font-size: 0.75rem; color: #c4b5fd; font-weight: bold; margin-bottom: 6px;">
+✨ Benefits
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; font-size: 0.65rem; color: #e9d5ff;">
+<div style="background: rgba(167, 139, 250, 0.25); padding: 4px 6px; border-radius: 3px;"><b>✓</b> Batch handles heavy historical load</div>
+<div style="background: rgba(167, 139, 250, 0.25); padding: 4px 6px; border-radius: 3px;"><b>✓</b> Streaming processes recent interval</div>
+<div style="background: rgba(167, 139, 250, 0.25); padding: 4px 6px; border-radius: 3px;"><b>✓</b> Much faster computation speed</div>
+<div style="background: rgba(167, 139, 250, 0.25); padding: 4px 6px; border-radius: 3px;"><b>✓</b> Reduced backfill time dramatically</div>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1837,6 +1844,15 @@ History + Incremental
 
 .emit-history-label {
   animation: emitHistoryLabelAnim 24s ease-in-out forwards;
+}
+
+.benefits-list {
+  animation: benefitsListAnim 24s ease-in-out forwards;
+}
+
+@keyframes benefitsListAnim {
+  0%, 98% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes historicalAnim {
@@ -1957,149 +1973,7 @@ History + Incremental
 
 <div class="grid gap-4 text-xs" style="grid-template-columns: 40% 60%;">
 
-<div>
-
-```
-   Orders  ────┐             ┌──── OrderDetail
-               │             │
-               ▼             ▼
-         ┌─────────────────────────┐
-         │  [Interval JOIN: 1h]    │
-         │   (Recent data only)    │
-         └───────────┬─────────────┘
-                     ▼
-         ┌─────────────────────────┐
-         │   [Lookup JOIN Layer]   │
-         │  ┌────────┬────────┐    │
-         │  ▼        │        ▼    │
-         │┌──────┐   │  ┌────────┐ │
-         ││Orders│◄──┼─►│Details │ │
-         ││DB    │   │  |DB      │ │
-         │└──────┘   │  └────────┘ │
-         └───────────┬─────────────┘
-                     ▼
-         ┌─────────────────────────┐                    ┌─────────────────────────┐
-         │   [OLAP Database]       │ ◄── [History Data] │   [Batch Query Engine]  │
-         └─────────────────────────┘                    └─────────────────────────┘
-```
-
 </div>
-
-<div>
-
-##### Traditional Stream JOIN:
-```
-Orders Stream ───────┐
-                     ├── [JOIN] ── Output Stream
-OrderDetail Stream ──┘
-State: Full table data
-```
-
-##### Interval JOIN state:
-
-```
-Orders Stream ───────┐
-                     ├── [Interval JOIN] ── Output Stream
-OrderDetail Stream ──┘
-State: Only interval state hot data
-```
-
-##### Lookup JOIN:
-
-```
-Orders Stream ────┐
-                  ├── [LOOKUP] ── Output Stream
-OrderDetail DB ───┘
-Cache: Only hot keys (MB)
-```
-
-</div>
-
-</div>
----
-
-# After Optimization
-#### Hybrid Approach Benefits
-
-<div class="flex justify-center mb-4">
-<div style="position: relative; width: 700px; height: 320px;">
-
-<!-- Timeline visualization -->
-<div style="position: absolute; left: 50px; top: 20px; width: 600px; height: 2px; background: linear-gradient(to right, #4299e1 0%, #4299e1 70%, #f6ad55 70%, #f6ad55 100%);"></div>
-
-<!-- Time markers -->
-<div style="position: absolute; left: 50px; top: 5px; font-size: 0.6rem; color: #4299e1;">
-Jan
-</div>
-<div style="position: absolute; left: 350px; top: 5px; font-size: 0.6rem; color: #4299e1;">
-Nov
-</div>
-<div style="position: absolute; right: 50px; top: 5px; font-size: 0.6rem; color: #f6ad55;">
-Now
-</div>
-
-<!-- Historical Data Section (Left - Batch) -->
-<div v-click style="position: absolute; left: 20px; top: 40px; width: 420px; padding: 12px; border: 3px solid #4299e1; background: rgba(66, 153, 225, 0.1); border-radius: 8px;">
-<div style="text-align: center;">
-<b style="color: #4299e1; font-size: 0.9rem;">📊 Historical Data (Batch)</b>
-<div style="margin-top: 8px; font-size: 0.7rem; color: #90cdf4;">
-Jan ~ Nov (10 months)
-</div>
-<div style="margin-top: 6px; padding: 8px; background: rgba(104, 211, 145, 0.2); border: 2px solid #68d391; border-radius: 6px;">
-<div style="font-size: 0.75rem; color: #68d391;">
-<b>✓ Batch Engine Processing</b>
-</div>
-<div style="font-size: 0.6rem; color: #9ae6b4; margin-top: 4px;">
-Fast parallel computation
-</div>
-<div style="font-size: 0.65rem; color: #68d391; margin-top: 4px;">
-<b>⚡ Much Faster!</b>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Recent Interval Section (Right - Streaming) -->
-<div v-click style="position: absolute; right: 20px; top: 40px; width: 200px; padding: 12px; border: 3px solid #f6ad55; background: rgba(246, 173, 85, 0.1); border-radius: 8px;">
-<div style="text-align: center;">
-<b style="color: #f6ad55; font-size: 0.9rem;">🔄 Recent Interval</b>
-<div style="margin-top: 8px; font-size: 0.7rem; color: #fbd38d;">
-Dec(1 month)
-</div>
-<div style="margin-top: 6px; padding: 8px; background: rgba(159, 122, 234, 0.2); border: 2px solid #9f7aea; border-radius: 6px;">
-<div style="font-size: 0.75rem; color: #9f7aea;">
-<b>✓ Streaming Backfill</b>
-</div>
-<div style="font-size: 0.6rem; color: #c4b5fd; margin-top: 4px;">
-Minimal data to process
-</div>
-</div>
-</div>
-</div>
-
-<!-- Arrow pointing to interval -->
-<div v-click style="position: absolute; right: 120px; top: 175px; font-size: 2rem; color: #9f7aea;">
-↑
-</div>
-<div v-click style="position: absolute; right: 30px; top: 200px; font-size: 0.65rem; color: #9f7aea; background: rgba(159, 122, 234, 0.25); padding: 4px 8px; border-radius: 4px; white-space: nowrap; font-weight: 600;">
-Only backfill this!
-</div>
-
-<!-- Benefits list -->
-<div v-click style="position: absolute; left: 20px; bottom: 10px; width: 660px; padding: 14px; background: rgba(104, 211, 145, 0.15); border-left: 4px solid #68d391; border-radius: 4px;">
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.8rem; color: #9ae6b4;">
-<div><b>✓</b> Batch handles heavy historical load</div>
-<div><b>✓</b> Streaming only processes recent interval</div>
-<div><b>✓</b> Much faster computation speed</div>
-<div><b>✓</b> Reduced backfill time dramatically</div>
-</div>
-</div>
-
-</div>
-</div>
-
-
-
 
 ---
 
@@ -2206,6 +2080,7 @@ class: "text-center"
 ---
 
 # Conclusion
+
 ---
 
 # Why Build Streaming Pipelines?
@@ -2310,7 +2185,7 @@ Your dbt skills now unlock <span class="text-green-400 font-bold">real-time anal
 <div class="flex flex-col items-center" style="padding-top: 1rem;">
 
 <div class="text-center mb-5">
-<div class="text-4xl font-bold mb-3 text-white">
+<div class="text-6xl font-bold mb-3" style="color: #E30613;">
 TSMC
 </div>
 <div class="text-2xl font-semibold text-gray-300">
